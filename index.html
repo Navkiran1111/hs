@@ -32,12 +32,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js" type="text/javascript"></script>
 
     <style>
+/* Apply this only on iOS devices */
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    background-attachment: scroll; /* Use scroll instead of fixed for mobile */
+  }
+}
+
         
         .new{
             background-image:linear-gradient(rgba(10,0,55,0.7),rgba(10,0,55,0.7)) ,url("n.webp");
   background-color: #cccccc;
   height: auto;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
